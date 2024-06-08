@@ -1,9 +1,17 @@
 import java.io.File;
+import java.utils.Scanner;
 
 class DeleteFolders{
     public static void main(String[] args){
-        File file = new File("E:\\java_prac\\java codes\\file_handling\\nayan");
+        System.out.println("Deleting folder using java program....!!");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter location of file/Folder : ");
+        String location = sc.nextLine();
+        sc.close();
+        File file = new File(location);
         delDirs(file,0,file.list());
+        System.out.println("\n........Folder is deleted successfully");
     }
 
     
